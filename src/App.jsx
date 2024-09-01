@@ -5,6 +5,7 @@ import SideMenu from './components/common/SideMenu'
 import './index.css'
 import Button from '../src/components/common/Button'
 import Hero from './sections/Hero'
+import SustainableGoals from './sections/SustainableGoals'
 function App() {
 
 
@@ -15,7 +16,8 @@ function App() {
         <SideMenu />
         <Hero />
       </div>
-      <div>
+      <div className='bg-gray'>
+        <SustainableGoals />
 
       </div>
 
