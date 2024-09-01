@@ -1,15 +1,24 @@
 import { useState } from 'react'
-import './index.css'
 
+import Navbar from './components/common/Navbar'
+import SideMenu from './components/common/SideMenu'
+import './index.css'
+import Button from '../src/components/common/Button'
+import Hero from './sections/Hero'
 function App() {
- 
+
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-       
+      <div>
+        <Navbar />
+        <SideMenu />
+        <Hero />
+      </div>
+      <div>
+
+      </div>
+
     </>
   )
 }
