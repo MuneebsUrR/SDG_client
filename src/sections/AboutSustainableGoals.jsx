@@ -8,7 +8,7 @@ import reading from '../assets/icon-reading-color.png'
 import target from '../assets/icon-target-red.png'
 import plastic from '../assets/plastic-recycle-icon.png'
 import upload from '../assets/icon-upload-fill-green.png'
-export default function SustainableGoals() {
+export default function AboutSustainableGoals() {
     return (
         <div className='p-10'>
             <div className='flex items-center justify-center'>
