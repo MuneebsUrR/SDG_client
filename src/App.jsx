@@ -1,28 +1,17 @@
-import { useState } from 'react'
 
-import Navbar from './components/common/Navbar'
-import SideMenu from './components/common/SideMenu'
 import './index.css'
-import Button from '../src/components/common/Button'
-import Hero from './sections/Hero'
-import AboutSustainableGoals from './sections/AboutSustainableGoals'
-import SustainableGoalsPoints from './sections/SustainableGoalsPoints'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/home'
+import SDG from './pages/sdg'
 function App() {
 
 
   return (
     <>
-      <div>
-        <Navbar />
-        <SideMenu />
-        <Hero />
-      </div>
-      <div className='bg-gray'>
-        <AboutSustainableGoals />
-      </div>
-      <div>
-        <SustainableGoalsPoints />
-      </div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sdg/:id' element={<SDG />} />
+      </Routes>
 
     </>
   )

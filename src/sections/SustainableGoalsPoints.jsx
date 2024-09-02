@@ -19,6 +19,7 @@ import goal17 from '../assets/E-WEB-Goal-17.png';
 import SDGTitle from '../components/common/SDGTitle';
 
 import Button from '../components/common/Button';
+import { Link } from 'react-router-dom';
 const SustainableGoalsPoints = () => {
     const goals = [
         { id: 1, icon: goal1 },
@@ -43,7 +44,7 @@ const SustainableGoalsPoints = () => {
     return (
 
         <div className='mt-10 flex flex-col md:flex-row justify-between text-center md:text-left p-3'>
-            <div className='w-full lg:w-[60%]'>
+            <div className='w-full lg:w-[60%] mb-5'>
 
                 <SDGTitle text="17 SUSTAINABLE DEVELOPMENT GOALS" />
                 <p className="mb-6 font-semibold mt-10">
@@ -58,13 +59,13 @@ const SustainableGoalsPoints = () => {
                 <div className='flex gap-3 flex-wrap items-center justify-center'>
                     {goals.map((goal) => (
                         <div>
-                            <a
+                            <Link
                                 key={goal.id}
-                                href="#" // Add your link here
+                                to={`/sdg/${goal.id}`} // Add your link here
                                 className="flex items-center justify-center transition-transform transform hover:scale-110"
                             >
                                 <img src={goal.icon} alt={`Goal ${goal.id}`} className="h-20 w-20 md:h-32 md:w-32" />
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>
