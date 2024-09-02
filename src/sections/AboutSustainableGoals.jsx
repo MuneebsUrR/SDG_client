@@ -27,7 +27,7 @@ export default function AboutSustainableGoals() {
 
                         <img width={40} height={40} src={target} alt="" />
                     </div>
-                    <p style={{ color: '#23036E' }} className='font-bold text-4xl'>169</p>
+                    <p style={{ color: '#23036E' }} className='font-bold text-3xl'>169</p>
                     <p className='font-bold text-lg' >Targets</p>
                 </div>
                 <div>
@@ -35,7 +35,7 @@ export default function AboutSustainableGoals() {
 
                         <img width={40} height={40} src={campaign} alt="" />
                     </div>
-                    <p style={{ color: '#23036E' }} className='font-bold text-4xl'>25</p>
+                    <p style={{ color: '#23036E' }} className='font-bold text-3xl'>25</p>
                     <p className='font-bold text-lg' >Campaigns</p>
                 </div>
                 <div>
@@ -43,7 +43,7 @@ export default function AboutSustainableGoals() {
 
                         <img width={40} height={40} src={pledge} alt="" />
                     </div>
-                    <p style={{ color: '#23036E' }} className='font-bold text-4xl'>23918</p>
+                    <p style={{ color: '#23036E' }} className='font-bold text-3xl'>23918</p>
                     <p className='font-bold text-lg' >Pledges</p>
                 </div>
                 <div>
@@ -51,7 +51,7 @@ export default function AboutSustainableGoals() {
 
                         <img width={40} height={40} src={upload} alt="" />
                     </div>
-                    <p style={{ color: '#23036E' }} className='font-bold text-4xl'>25393</p>
+                    <p style={{ color: '#23036E' }} className='font-bold text-3xl'>25393</p>
                     <p className='font-bold text-lg' >Actions Taken </p>
                 </div>
                 <div>
@@ -59,7 +59,7 @@ export default function AboutSustainableGoals() {
 
                         <img width={40} height={40} src={campaign} alt="" />
                     </div>
-                    <p style={{ color: '#23036E' }} className='font-bold text-4xl'>71</p>
+                    <p style={{ color: '#23036E' }} className='font-bold text-3xl'>71</p>
                     <p className='font-bold text-lg' >Reading Material</p>
                 </div>
                 <div>
@@ -67,7 +67,7 @@ export default function AboutSustainableGoals() {
 
                         <img width={40} height={40} src={quiz} alt="" />
                     </div>
-                    <p style={{ color: '#23036E' }} className='font-bold text-4xl'>30</p>
+                    <p style={{ color: '#23036E' }} className='font-bold text-3xl'>30</p>
                     <p className='font-bold text-lg' >Quiz</p>
                 </div>
                 <div>
@@ -75,7 +75,7 @@ export default function AboutSustainableGoals() {
 
                         <img width={40} height={40} src={plastic} alt="" />
                     </div>
-                    <p style={{ color: '#23036E' }} className='font-bold text-4xl'>27842 kgs
+                    <p style={{ color: '#23036E' }} className='font-bold text-3xl'>27842 kgs
                     </p>
                     <p className='font-bold text-lg' > Plastic Recycled</p>
                 </div>

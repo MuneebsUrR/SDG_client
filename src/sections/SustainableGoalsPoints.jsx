@@ -16,7 +16,9 @@ import goal14 from '../assets/E-WEB-Goal-14.png';
 import goal15 from '../assets/E-WEB-Goal-15.png';
 import goal16 from '../assets/E-WEB-Goal-16.png';
 import goal17 from '../assets/E-WEB-Goal-17.png';
+import SDGTitle from '../components/common/SDGTitle';
 
+import Button from '../components/common/Button';
 const SustainableGoalsPoints = () => {
     const goals = [
         { id: 1, icon: goal1 },
@@ -39,30 +41,38 @@ const SustainableGoalsPoints = () => {
     ];
 
     return (
-        <div className="flex p-6">
-            <div className="flex-1 pr-8">
-                <h2 className="text-2xl font-bold mb-4">17 SUSTAINABLE DEVELOPMENT GOALS</h2>
-                <p className="mb-6">
+
+        <div className='mt-10 flex flex-col md:flex-row justify-between text-center md:text-left p-3'>
+            <div className='w-full lg:w-[60%]'>
+
+                <SDGTitle text="17 SUSTAINABLE DEVELOPMENT GOALS" />
+                <p className="mb-6 font-semibold mt-10">
                     In September 2015, the United Nations General Assembly adopted the 17 Sustainable Development Goals (SDGs) to create a sustainable new world by 2030.
                     The main spirit behind all these 17 SDGs is to ensure that no life is left behind. The 17 SDGs cover all aspects of people, planet, and profit and offer a holistic approach to achieving sustainable development for all.
                 </p>
-                <a href="#" className="inline-block mt-4 text-blue-600 hover:underline">Explore All 17 SDG Goals</a>
+
+                <Button title="EXPLORE ALL 17 SDG GOALS" />
+
             </div>
-            <div className="flex-1">
-                <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
+            <div>
+                <div className='flex gap-3 flex-wrap items-center justify-center'>
                     {goals.map((goal) => (
-                        <a
-                            key={goal.id}
-                            href="#" // Add your link here
-                            className="flex items-center justify-center transition-transform transform hover:scale-110"
-                        >
-                            <img src={goal.icon} alt={`Goal ${goal.id}`} className="h-16 w-16" />
-                        </a>
+                        <div>
+                            <a
+                                key={goal.id}
+                                href="#" // Add your link here
+                                className="flex items-center justify-center transition-transform transform hover:scale-110"
+                            >
+                                <img src={goal.icon} alt={`Goal ${goal.id}`} className="h-20 w-20 md:h-32 md:w-32" />
+                            </a>
+                        </div>
                     ))}
                 </div>
             </div>
+
         </div>
     );
 };
 
 export default SustainableGoalsPoints;
+
