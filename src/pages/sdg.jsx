@@ -11,6 +11,7 @@ export default function SDG() {
         <div>
             <Hero id={id} description={description} />
             <p className='text-sm m-2'>Home / 17 Sustainable Development Goals<span className='text-slate-500'> / SDG {id} </span> </p>
+            <h2 className='text-3xl font-bold p-2 mt-10 mb-10'>Let's learn a little more about SDG {id}.</h2>
 
             <div>
                 <Tabs overview={overview} facts={facts} targets={targets} id={id} />
