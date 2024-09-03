@@ -29,8 +29,8 @@ const InfoBox = ({stat,description}) => {
     return (
         <div className="relative flex items-center justify-center bg-gradient-to-r from-yellow-100 via-red-50 to-pink-100 rounded-lg py-10 px-6 mt-12 ">
             {/* Circle */}
-            <div className="absolute top-2 bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-red-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">{stat}</span>
+            <div className="absolute top-2 text-center bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-red-500 rounded-full flex items-center justify-center">
+                <span className="text-white  font-bold text-lg">{stat}</span>
             </div>
             {/* Text */}
             <div className="flex-grow text-center mt-10">
@@ -42,7 +42,7 @@ const InfoBox = ({stat,description}) => {
     );
 };
 
-const Tabs = ({ overview,facts }) => {
+const Tabs = ({ overview,facts, targets, id }) => {
     const [selectedTab, setSelectedTab] = useState("OVERVIEW");
 
     const tabs = [
@@ -54,6 +54,7 @@ const Tabs = ({ overview,facts }) => {
     const content = {
         "FACTS & FIGURES": (
             <div>
+                <h1 className='mt-5 mb-10 font-bold text-3xl'>Did You Know These Facts About SDG {id}?</h1>
                 {facts.map((fact,index)=>{
                     return(
                         <div key={index}>
@@ -76,7 +77,15 @@ const Tabs = ({ overview,facts }) => {
                 </div>
             ))}
         </div>,
-        "TARGETS": <div><h2 className="text-2xl font-bold">Targets Content</h2><p>Targets information would go here.</p></div>
+        "TARGETS": <div><h2 className="text-3xl font-bold mt-5 mb-10">Targets For SDG {id} </h2>
+        {targets.map((target,index)=>{
+                    return(
+                        <div key={index}>
+                            <InfoBox stat={target.heading} description={target.description} />
+                        </div>
+                    )
+                })}
+        </div>
     };
 
     return (
