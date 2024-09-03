@@ -18,6 +18,7 @@ export default {
         secondary: "#23036E",
         light: "#efeee5",
         gray:"#D6EBD8",
+        buttonGray:"#F5F5F5",
         dark: "#151a17",
       },
     },
