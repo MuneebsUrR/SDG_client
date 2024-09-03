@@ -2,6 +2,18 @@ export const data = {
     1: {
         title: "No Poverty",
         description: "End poverty in all its forms everywhere",
+        overview:[
+            {
+                text:`<h1 class="font-bold text-2xl">It is important to note that here, “Poverty in all forms” refers not only to ‘lack of financia... </h1>
+                      <p class="text-lg">It is important to note that here, “Poverty in all forms” refers not only to ‘lack of financial resources’, but amongst other things also to a ‘lack of a voice’. As a corollary, if their voice is not heard, even the rich can be considered poor. It is not uncommon for specific people around us to remain unheard. Elders, or women or children can go unheard. Servants, domestic workers and street vendors too.</p>`,
+                imgurl:`https://picsum.photos/200`
+            },
+            {
+                text:`<h1 class="font-bold text-2xl" >It is important to note that here, “Poverty in all forms” refers not only to ‘lack of financia... </h1>
+                      <p class = "text-lg" >It is important to note that here, “Poverty in all forms” refers not only to ‘lack of financial resources’, but amongst other things also to a ‘lack of a voice’. As a corollary, if their voice is not heard, even the rich can be considered poor. It is not uncommon for specific people around us to remain unheard. Elders, or women or children can go unheard. Servants, domestic workers and street vendors too.</p>`,
+                imgurl:`https://picsum.photos/200`
+            },
+        ]
     },
     2: {
         title: "Zero Hunger",

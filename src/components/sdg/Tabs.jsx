@@ -25,8 +25,8 @@ const TabButton = ({ text, icon, isSelected, onClick }) => {
     );
 };
 
-const Tabs = () => {
-    const [selectedTab, setSelectedTab] = useState("FACTS & FIGURES");
+const Tabs = ({ overview }) => {
+    const [selectedTab, setSelectedTab] = useState("OVERVIEW");
 
     const tabs = [
         { text: "OVERVIEW", icon: <ListIcon /> },
@@ -51,13 +51,24 @@ const Tabs = () => {
                 </div>
             </div>
         ),
-        "OVERVIEW": <div><h2 className="text-2xl font-bold">Overview Content</h2><p>Overview information would go here.</p></div>,
+        "OVERVIEW": <div>
+            {overview.map((item, index) => (
+                <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} my-5`}>
+                    <div style={{ flex: '1', padding: '10px' }}>
+                        <img className='object-cover w-full' src={item.imgurl} alt="overview" />
+                    </div>
+                    <div className='text-center md:text-left max-w-2xl' style={{ flex: '2', padding: '20px' }}>
+                        <div dangerouslySetInnerHTML={{ __html: item.text }} />
+                    </div>
+                </div>
+            ))}
+        </div>,
         "TARGETS": <div><h2 className="text-2xl font-bold">Targets Content</h2><p>Targets information would go here.</p></div>
     };
 
     return (
-        <div className="flex">
-            <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row">
+            <div className="flex flex-row md:flex-col" style={{ overflowX: 'auto', scrollbarWidth: 'none' }}>
                 {tabs.map((tab) => (
                     <TabButton
                         key={tab.text}
