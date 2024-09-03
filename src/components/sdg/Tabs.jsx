@@ -10,7 +10,7 @@ const TabButton = ({ text, icon, isSelected, onClick }) => {
     const widthStyle = isSelected ? "w-52" : "w-48";
 
     return (
-        <div className="p-2" onClick={onClick}>
+        <div className="p-3" onClick={onClick}>
             <div
                 className={`${baseStyle} ${colorStyle} ${widthStyle}`}
                 style={{
@@ -68,7 +68,7 @@ const Tabs = () => {
                     />
                 ))}
             </div>
-            <div className="flex-1 bg-[#FDF3F7] p-6 rounded-r-lg border-l-4 border-pink-600">
+            <div className="flex-1 bg-[#FDF3F7] p-6 rounded-r-lg border-l-4 border-primary">
                 {content[selectedTab]}
             </div>
         </div>
