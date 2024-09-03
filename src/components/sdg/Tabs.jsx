@@ -25,7 +25,24 @@ const TabButton = ({ text, icon, isSelected, onClick }) => {
     );
 };
 
-const Tabs = ({ overview }) => {
+const InfoBox = ({stat,description}) => {
+    return (
+        <div className="relative flex items-center justify-center bg-gradient-to-r from-yellow-100 via-red-50 to-pink-100 rounded-lg py-10 px-6 mt-12 ">
+            {/* Circle */}
+            <div className="absolute top-2 bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-red-500 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">{stat}</span>
+            </div>
+            {/* Text */}
+            <div className="flex-grow text-center mt-10">
+                <p className="text-black">
+                    {description}
+                </p>
+            </div>
+        </div>
+    );
+};
+
+const Tabs = ({ overview,facts }) => {
     const [selectedTab, setSelectedTab] = useState("OVERVIEW");
 
     const tabs = [
@@ -37,18 +54,14 @@ const Tabs = ({ overview }) => {
     const content = {
         "FACTS & FIGURES": (
             <div>
-                <h2 className="text-2xl font-bold mb-4">Did You Know These Facts About SDG 2 - Zero Hunger?</h2>
-                <div className="bg-yellow-100 p-4 rounded-lg relative">
-                    <div className="absolute -top-6 -right-6 bg-yellow-500 rounded-full w-24 h-24 flex items-center justify-center text-white font-bold">
-                        <div>
-                            <div className="text-3xl">690</div>
-                            <div className="text-sm">Million</div>
+                {facts.map((fact,index)=>{
+                    return(
+                        <div key={index}>
+                            <InfoBox stat={fact.stat} description={fact.description} />
                         </div>
-                    </div>
-                    <p className="text-gray-800">
-                        Current estimates are that nearly <span className="text-blue-600 font-semibold">690 million people</span> are hungry, or 8.9 percent of the world population - up by 10 million people in one year and by nearly 60 million in five years.
-                    </p>
-                </div>
+                    )
+                })}
+                
             </div>
         ),
         "OVERVIEW": <div>
