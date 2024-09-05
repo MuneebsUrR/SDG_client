@@ -25,11 +25,11 @@ const TabButton = ({ text, icon, isSelected, onClick }) => {
     );
 };
 
-const InfoBox = ({ stat, description }) => {
+const InfoBox = ({ stat, description,bgColor }) => {
     return (
         <div className="relative flex items-center justify-center bg-gradient-to-r from-yellow-100 via-red-50 to-pink-100 rounded-lg py-10 px-6 mt-12 ">
             {/* Circle */}
-            <div className="absolute top-2 text-center bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-red-500 rounded-full flex items-center justify-center">
+            <div className="absolute top-2 text-center bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full flex items-center justify-center" style={{backgroundColor:`${bgColor}`}}>
                 <span className="text-white  font-bold text-lg">{stat}</span>
             </div>
             {/* Text */}
@@ -42,7 +42,7 @@ const InfoBox = ({ stat, description }) => {
     );
 };
 
-const Tabs = ({ overview, facts, targets, id }) => {
+const Tabs = ({ overview, facts, targets, id,bgColor }) => {
     const [selectedTab, setSelectedTab] = useState("OVERVIEW");
 
     const tabs = [
@@ -58,7 +58,7 @@ const Tabs = ({ overview, facts, targets, id }) => {
                 {facts.map((fact, index) => {
                     return (
                         <div key={index}>
-                            <InfoBox stat={fact.stat} description={fact.description} />
+                            <InfoBox stat={fact.stat} description={fact.description} bgColor={bgColor} />
                         </div>
                     )
                 })}
@@ -81,7 +81,7 @@ const Tabs = ({ overview, facts, targets, id }) => {
             {targets.map((target, index) => {
                 return (
                     <div key={index}>
-                        <InfoBox stat={target.heading} description={target.description} />
+                        <InfoBox stat={target.heading} description={target.description} bgColor={bgColor} />
                     </div>
                 )
             })}
