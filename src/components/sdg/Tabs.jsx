@@ -25,7 +25,7 @@ const TabButton = ({ text, icon, isSelected, onClick }) => {
     );
 };
 
-const InfoBox = ({stat,description}) => {
+const InfoBox = ({ stat, description }) => {
     return (
         <div className="relative flex items-center justify-center bg-gradient-to-r from-yellow-100 via-red-50 to-pink-100 rounded-lg py-10 px-6 mt-12 ">
             {/* Circle */}
@@ -42,7 +42,7 @@ const InfoBox = ({stat,description}) => {
     );
 };
 
-const Tabs = ({ overview,facts, targets, id }) => {
+const Tabs = ({ overview, facts, targets, id }) => {
     const [selectedTab, setSelectedTab] = useState("OVERVIEW");
 
     const tabs = [
@@ -55,36 +55,36 @@ const Tabs = ({ overview,facts, targets, id }) => {
         "FACTS & FIGURES": (
             <div>
                 <h1 className='mt-5 mb-10 font-bold text-3xl'>Did You Know These Facts About SDG {id}?</h1>
-                {facts.map((fact,index)=>{
-                    return(
+                {facts.map((fact, index) => {
+                    return (
                         <div key={index}>
                             <InfoBox stat={fact.stat} description={fact.description} />
                         </div>
                     )
                 })}
-                
+
             </div>
         ),
         "OVERVIEW": <div>
             {overview.map((item, index) => (
                 <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} my-5`}>
-                    <div style={{ flex: '1', padding: '10px' }}>
+                    {item.imgurl && <div style={{ flex: '1', padding: '10px' }}>
                         <img className='object-cover w-full' src={item.imgurl} alt="overview" />
-                    </div>
-                    <div className='text-center md:text-left max-w-2xl' style={{ flex: '2', padding: '20px' }}>
+                    </div>}
+                    <div className={`text-center md:text-left ${item.imgurl ? ' max-w-2xl' : 'w-full'}`} style={{ flex: '2', padding: '20px' }}>
                         <div dangerouslySetInnerHTML={{ __html: item.text }} />
                     </div>
                 </div>
             ))}
         </div>,
         "TARGETS": <div><h2 className="text-3xl font-bold mt-5 mb-10">Targets For SDG {id} </h2>
-        {targets.map((target,index)=>{
-                    return(
-                        <div key={index}>
-                            <InfoBox stat={target.heading} description={target.description} />
-                        </div>
-                    )
-                })}
+            {targets.map((target, index) => {
+                return (
+                    <div key={index}>
+                        <InfoBox stat={target.heading} description={target.description} />
+                    </div>
+                )
+            })}
         </div>
     };
 
