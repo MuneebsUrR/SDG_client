@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../sections/Hero'
 import AboutSustainableGoals from '../sections/AboutSustainableGoals'
 import SustainableGoalsPoints from '../sections/SustainableGoalsPoints'
+import Quotes from '../sections/Quotes'
 
 export default function Home() {
   return (
@@ -12,6 +13,10 @@ export default function Home() {
       </div>
       <div>
         <SustainableGoalsPoints />
+      </div>
+     
+      <div>
+        <Quotes />
       </div>
     </div>
   )
