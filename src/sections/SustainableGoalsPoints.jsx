@@ -52,7 +52,7 @@ const SustainableGoalsPoints = () => {
                     The main spirit behind all these 17 SDGs is to ensure that no life is left behind. The 17 SDGs cover all aspects of people, planet, and profit and offer a holistic approach to achieving sustainable development for all.
                 </p>
 
-                <Button title="EXPLORE ALL 17 SDG GOALS" />
+                <Button title="EXPLORE ALL 17 SDG GOALS" link={'sdg/1'} />
 
             </div>
             <div>

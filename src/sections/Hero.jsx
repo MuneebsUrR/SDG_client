@@ -66,10 +66,10 @@ const Hero = () => {
                             left: '10%',
                             color: 'white',
                             padding: '1rem',
-                           
+
                         }}
                     >
-                        <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
+                        <Typography variant="h4" sx={{ fontWeight: 'bold',marginBottom:'25px' }}>
                             {item.title}
                         </Typography>
                         <Button title='Read More' />
