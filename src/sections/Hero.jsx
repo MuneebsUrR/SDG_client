@@ -69,10 +69,13 @@ const Hero = () => {
 
                         }}
                     >
-                        <Typography variant="h4" sx={{ fontWeight: 'bold',marginBottom:'25px' }}>
+                        <Typography variant="h3" sx={{ fontWeight: 'bold',margin:'25px' }}>
                             {item.title}
                         </Typography>
+                        <div className='m-6'>
+
                         <Button title='Read More' />
+                        </div>
                     </Box>
                 </Box>
             ))}

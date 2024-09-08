@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../sections/Hero'
 import AboutSustainableGoals from '../sections/AboutSustainableGoals'
 import SustainableGoalsPoints from '../sections/SustainableGoalsPoints'
-import Quotes from '../sections/Quotes'
+import ExploreQuotes from '../sections/ExploreQuotes'
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       </div>
      
       <div>
-        <Quotes />
+        <ExploreQuotes />
       </div>
     </div>
   )

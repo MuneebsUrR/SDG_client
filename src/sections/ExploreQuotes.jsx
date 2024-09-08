@@ -2,9 +2,9 @@ import React from 'react';
 import SDGTitle from '../components/common/SDGTitle';
 import Button from '../components/common/Button';
 
-const Quotes = () => {
+const ExploreQuotes = () => {
     return (
-        <>
+        <div>
             <div className='flex justify-center mt-20'>
                 <SDGTitle text='SDG TIP FOR DAILY LIFE' />
             </div>
@@ -46,8 +46,8 @@ const Quotes = () => {
             </div>
 
 
-        </>
+        </div>
     );
 };
 
-export default Quotes;
+export default ExploreQuotes;
