@@ -3,7 +3,7 @@ import SDGTitle from '../components/common/SDGTitle'
 import Carousal from '../components/common/Carousal'
 import Button from '../components/common/Button'
 
-export default function Campaign() {
+export default function CampaignCarousal() {
     return (
         <div className='py-10 mt-16' style={{ backgroundColor: '#F7F1F7' }}>
             <div className='flex items-center justify-center'>
@@ -13,7 +13,7 @@ export default function Campaign() {
             
             <Carousal   />
             <div className='flex justify-center mt-10'>
-                <Button title='EXPLORE ALL SDG CAMPAIGNS' />
+                <Button link={'/sdg-campaigns'} title='EXPLORE ALL SDG CAMPAIGNS' />
             </div>
         </div>
     )
