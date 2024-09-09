@@ -5,11 +5,13 @@ import Home from './pages/home'
 import SDG from './pages/sdg'
 import Quote from './pages/quote'
 import CampaignsList from './pages/CampaignsList'
+import ScrollToTop from '../services/Scrolltotop'
 function App() {
 
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sdg/:id' element={<SDG />} />

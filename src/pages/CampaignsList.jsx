@@ -36,7 +36,7 @@ const pledges = [
 export default function CampaignsList() {
   return (
     <div>
-      <div className=' h-[45vh] md:h-[60vh]' style={{
+      <div className=' h-[45vh] md:h-[70vh]' style={{
         backgroundImage: `url(${banner})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
