@@ -3,6 +3,7 @@ import Hero from '../sections/Hero'
 import AboutSustainableGoals from '../sections/AboutSustainableGoals'
 import SustainableGoalsPoints from '../sections/SustainableGoalsPoints'
 import ExploreQuotes from '../sections/ExploreQuotes'
+import Campaign from '../sections/Campaign'
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
      
       <div>
         <ExploreQuotes />
+      </div>
+      <div>
+        <Campaign />
       </div>
     </div>
   )
