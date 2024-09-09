@@ -65,7 +65,7 @@ const Hero = () => {
                             top: '40%',
                             left: '10%',
                             color: 'white',
-                            // padding: '1rem',
+                            
 
                         }}
                     >

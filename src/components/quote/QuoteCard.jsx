@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Badge from '../../components/common/Badge';
 const SDGCard = ({ date, text, sdg }) => {
     return (
         <div className="relative bg-gradient-to-r from-yellow-100 via-pink-100 to-pink-50 p-6 rounded-xl shadow-lg w-full md:w-1/4 flex-grow mb-4 mx-2">
@@ -10,11 +10,11 @@ const SDGCard = ({ date, text, sdg }) => {
             </div>
 
             {/* Quotation Marks */}
-            <div className="absolute top-4 left-4 text-2xl text-red-500">
+            <div className="absolute top-8 left-4 text-5xl text-red-500">
                 <span>&ldquo;</span>
             </div>
 
-            <div className="absolute bottom-4 right-4 text-2xl text-red-500">
+            <div className="absolute bottom-14 right-4 text-5xl text-red-500">
                 <span>&rdquo;</span>
             </div>
 
@@ -27,7 +27,11 @@ const SDGCard = ({ date, text, sdg }) => {
             <div className="text-center mt-4">
                 <p className="text-gray-500 text-sm">Related SDGs</p>
                 <div className="mt-2 flex justify-center">
-                    <span className="bg-red-500 text-white text-sm font-bold py-1 px-3 rounded-md">{sdg}</span>
+                    {
+                        sdg.map((number, index) => (
+                            <Badge key={index} number={number} />
+                        ))
+                    }
                 </div>
             </div>
         </div>

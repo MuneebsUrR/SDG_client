@@ -1,8 +1,8 @@
 import React from 'react'
 import quoteIcon from '../assets/quote-icon.png'
 import banner from '../assets/quote-banner.jpg'
-import QuoteCard from '../components/common/QuoteCard'
-import {quotes} from '../../lib/quotes'
+import QuoteCard from '../components/quote/QuoteCard'
+import { quotes } from '../../lib/quotes'
 export default function Quote() {
     return (
         <div>

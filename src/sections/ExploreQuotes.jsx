@@ -1,7 +1,8 @@
 import React from 'react';
 import SDGTitle from '../components/common/SDGTitle';
 import Button from '../components/common/Button';
-
+import { quotes } from '../../lib/quotes';
+import Badge from '../components/common/Badge';
 const ExploreQuotes = () => {
     return (
         <div>
@@ -19,18 +20,21 @@ const ExploreQuotes = () => {
                         <div className="absolute inset-0 bg-pink-50 rounded-lg border-2 border-red-300 border-t-0"></div>
                         <div className="absolute -top-6 left-20 text-red-500 text-7xl">"</div>
                         <div className="absolute -bottom-5 right-0 text-red-500 text-7xl rotate-180">"</div>
-                        <p className='relative z-10 text-gray-800 text-xl pt-2 text-red-500 font-bold text-center'>7 SEP</p>
-                        <p className="relative z-10 text-gray-800 text-xl pt-2 pb-8 text-center">
-
-                            Provide guidance, direction and coaching to women to help build their confidence and careers.
+                        <p className='relative z-10 text-gray-800 text-xl pt-2 text-red-500 font-bold text-center'>{quotes[0].date}</p>
+                        <p className="relative z-10 px-2 text-gray-800 text-xl pt-2 pb-8 text-center">
+                            {quotes[0].text}
                         </p>
                         <p className="relative z-10 text-gray-800 text-sm text-center">Related SDGs</p>
                         <div>
-                            <div className="relative z-10 space-x-2 text-center text-white font-semibold flex justify-center">
-                                <div className="w-6 h-6 bg-red-500 rounded-md mt-1">5</div>
-                                <div className="w-6 h-6 bg-red-500 rounded-md mt-1 -ml-2">6</div>
-                                <div className="w-6 h-6 bg-red-500 rounded-md mt-1 -ml-2">8</div>
+                            <div className="relative z-10 flex items-center justify-center">
+                                {
+                                    quotes[0].sdg.map((number, index) => (
+                                        <Badge number={number} />
+                                    ))
+                                }
+
                             </div>
+
                         </div>
                         {/* Adjusted the pink box to point downwards */}
                         <div className="absolute bottom-0 left-1/4 transform -translate-x-1/2 translate-y-1/2 w-16 h-16 bg-pink-50 border-b-2 border-r-2 border-red-300 rotate-45"></div>
