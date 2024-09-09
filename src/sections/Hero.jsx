@@ -65,11 +65,11 @@ const Hero = () => {
                             top: '40%',
                             left: '10%',
                             color: 'white',
-                            padding: '1rem',
+                            // padding: '1rem',
 
                         }}
                     >
-                        <Typography variant="h3" sx={{ fontWeight: 'bold',margin:'25px' }}>
+                        <Typography variant="h3" sx={{ fontWeight: 'bold',margin:'20px' }}>
                             {item.title}
                         </Typography>
                         <div className='m-6'>
