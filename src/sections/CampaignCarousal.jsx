@@ -1,6 +1,7 @@
 import React from 'react'
 import SDGTitle from '../components/common/SDGTitle'
 import Carousal from '../components/common/Carousal'
+import Button from '../components/common/Button'
 
 export default function Campaign() {
     return (
@@ -11,6 +12,9 @@ export default function Campaign() {
             <p className='text-center font-semibold max-w-xl mx-auto'>Make a pledge to these SDG Campaigns and let's together determine to build a sustainable new world</p>
             
             <Carousal   />
+            <div className='flex justify-center mt-10'>
+                <Button title='EXPLORE ALL SDG CAMPAIGNS' />
+            </div>
         </div>
     )
 }

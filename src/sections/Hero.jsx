@@ -74,7 +74,7 @@ const Hero = () => {
                         </Typography>
                         <div className='m-6'>
 
-                        <Button title='Read More' />
+                        <Button title='KNOW MORE' />
                         </div>
                     </Box>
                 </Box>

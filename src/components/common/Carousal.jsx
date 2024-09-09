@@ -34,7 +34,7 @@ const pledges = [
     },
 ];
 
-const PledgeCard = ({ pledge }) => (
+export const PledgeCard = ({ pledge }) => (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex-shrink-0 w-full md:w-[calc(49%-0.5rem)]">
         <img src={pledge.image} alt={pledge.title} className="w-full h-48 object-cover" />
         <div className="p-4 bg-gradient-to-r from-yellow-100 via-pink-100 to-pink-50">
@@ -52,7 +52,7 @@ const PledgeCard = ({ pledge }) => (
                 </div>
             </div>
            <div>
-              <Button title='Know More' />
+              <Button title='KNOW MORE' />
            </div>
         </div>
     </div>

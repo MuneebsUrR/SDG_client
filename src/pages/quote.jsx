@@ -22,7 +22,7 @@ export default function Quote() {
                 <img src={quoteIcon} alt="" />
             </div>
             <div>
-                <p className='text-center font-semibold text-lg py-5'>Sustainability is not about one person adopting a perfectly sustainable lifestyle. Sustainability is about each person across the planet taking one small step every day to adopt sustainability as a way of life. These 'SDG Tips for Daily Life' are simple suggestions that can help us live sustainabily.</p>
+                <p className='text-center mx-auto max-w-6xl font-semibold text-lg py-5'>Sustainability is not about one person adopting a perfectly sustainable lifestyle. Sustainability is about each person across the planet taking one small step every day to adopt sustainability as a way of life. These 'SDG Tips for Daily Life' are simple suggestions that can help us live sustainabily.</p>
                 <hr className='m-4 text-slate-500' />
             </div>
             <div className="container mx-auto mt-10 px-4">
