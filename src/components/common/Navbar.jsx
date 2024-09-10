@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-30 transition-colors duration-300 ${scrolled ? 'bg-primary' : 'bg-transparent'}`}>
       <div className="bg-transparent flex flex-row justify-between items-center gap-5 px-4 lg:pb-4">
-        <a href="/" className="transform transition-transform duration-150">
+        <a href="/" className="mt-1 transform transition-transform duration-150">
           <img src={logo} alt="" width={70} height={70} />
         </a>
 

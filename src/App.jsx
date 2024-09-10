@@ -6,6 +6,7 @@ import SDG from './pages/sdg'
 import Quote from './pages/quote'
 import CampaignsList from './pages/CampaignsList'
 import ScrollToTop from '../services/Scrolltotop'
+import CampaignDetail from './pages/CampaignDetail'
 function App() {
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/sdg/:id' element={<SDG />} />
         <Route path='/quotes' element={<Quote />} />
         <Route path='/sdg-campaigns' element={<CampaignsList />} />
+        <Route path='/sdg-campaigns/:name' element={<CampaignDetail />} />
       </Routes>
 
     </>

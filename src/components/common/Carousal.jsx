@@ -52,7 +52,7 @@ export const PledgeCard = ({ pledge }) => (
                 </div>
             </div>
            <div>
-              <Button title='KNOW MORE' />
+              <Button link={`/sdg-campaigns/${pledge.pledgeText}`} title='KNOW MORE' />
            </div>
         </div>
     </div>
