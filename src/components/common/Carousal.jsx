@@ -3,6 +3,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import GroupsIcon from '@mui/icons-material/Groups';
 import Badge from '../common/Badge';
 import Button from './Button';
+
+
 const pledges = [
     {
         title: "MANGROVE CLEANING DRIVE",
