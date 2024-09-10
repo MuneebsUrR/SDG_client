@@ -9,16 +9,20 @@ const newsItems = [
         id: 1,
         title: 'Bharat Soka Gakkai Collects 27,726 Kg Of Plastic Waste From Delhi-NCR For Recycling',
         imageUrl: 'https://picsum.photos/200/300', // Replace with actual image URL
+        href: '#'
+
     },
     {
         id: 2,
         title: 'New Innovations in Renewable Energy',
         imageUrl: 'https://picsum.photos/200/300', // Replace with actual image URL
+        href: '#'
     },
     {
         id: 3,
         title: 'Climate Change and Its Impact on Wildlife',
         imageUrl: 'https://picsum.photos/200/300', // Replace with actual image URL
+        href: '#'
     },
 ];
 
@@ -65,16 +69,16 @@ const Hero = () => {
                             top: '40%',
                             left: '10%',
                             color: 'white',
-                            
+
 
                         }}
                     >
-                        <Typography variant="h3" sx={{ fontWeight: 'bold',margin:'20px' }}>
+                        <Typography variant="h3" sx={{ fontWeight: 'bold', margin: '20px' }}>
                             {item.title}
                         </Typography>
                         <div className='m-6'>
 
-                        <Button title='KNOW MORE' />
+                            <Button link={item.href} title='KNOW MORE' />
                         </div>
                     </Box>
                 </Box>

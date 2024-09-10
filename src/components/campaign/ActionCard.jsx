@@ -47,7 +47,7 @@ export default function ActionCard({ data }) {
                     <span className="absolute inset-0 bg-primary w-full h-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
                     <span className="relative z-10"> <BackHandIcon fontSize='small' /> PLEDGE NOW</span>
                 </button>
-                <button className="relative text-sm w-full bg-secondary text-white font-bold py-1.5 px-4 rounded-2xl overflow-hidden group">
+                <button onClick={()=>alert('You need to login to APP to perform the action')} className="relative text-sm w-full bg-secondary text-white font-bold py-1.5 px-4 rounded-2xl overflow-hidden group">
                     <span className="absolute inset-0 bg-primary w-full h-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
                     <span className="relative z-10"> <FileUploadIcon fontSize='small' /> UPLOAD ACTION</span>
                 </button>
