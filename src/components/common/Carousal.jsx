@@ -10,7 +10,7 @@ import CampaignContext from '../../context/CampaignContext';
 export const PledgeCard = ({ pledge }) => (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex-shrink-0 w-full md:w-[calc(49%-0.5rem)]">
         <img src={pledge?.image} alt={pledge?.title} className="w-full h-64 object-cover" />
-        <div className="p-4 bg-gradient-to-r from-yellow-100 via-pink-100 to-pink-50">
+        <div className="p-4 dark:text-black bg-gradient-to-r from-yellow-100 via-pink-100 to-pink-50">
             <h2 className="text-xl font-bold mb-2">{pledge?.title}</h2>
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">

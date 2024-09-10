@@ -10,7 +10,7 @@ const ExploreQuotes = () => {
                 <SDGTitle text='SDG TIP FOR DAILY LIFE' />
             </div>
 
-            <div className="max-w-5xl mx-auto mt-5">
+            <div className="max-w-5xl mx-auto mt-5 dark:text-dark">
 
                 <div className="relative">
 

@@ -20,6 +20,7 @@ export default {
         gray:"#D6EBD8",
         buttonGray:"#F5F5F5",
         dark: "#151a17",
+        lightpink:'#F7F1F7'
       },
     },
   },

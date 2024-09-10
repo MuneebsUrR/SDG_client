@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className='bg-gray'>
+      <div className='bg-gray dark:bg-black'>
         <AboutSustainableGoals />
       </div>
       <div>

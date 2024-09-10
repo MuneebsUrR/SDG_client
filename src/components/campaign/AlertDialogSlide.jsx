@@ -13,7 +13,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function AlertDialogSlide({ open, setOpen }) {
-  const {name} = useParams()
+  const { name } = useParams()
   const navigate = useNavigate();
 
   const handleClose = () => {

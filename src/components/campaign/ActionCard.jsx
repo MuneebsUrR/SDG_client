@@ -52,7 +52,7 @@ export default function ActionCard({ data }) {
                     <span className="relative z-10"> <FileUploadIcon fontSize='small' /> UPLOAD ACTION</span>
                 </button>
             </div>
-            <div className='m-2' style={{ backgroundColor: '#F7F1F7' }}>
+            <div className='m-2 dark:text-black' style={{ backgroundColor: '#F7F1F7' }}>
                 <p className='text-md p-5'>
                     {data?.description}
                 </p>
