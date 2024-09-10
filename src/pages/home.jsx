@@ -4,6 +4,7 @@ import AboutSustainableGoals from '../sections/AboutSustainableGoals'
 import SustainableGoalsPoints from '../sections/SustainableGoalsPoints'
 import ExploreQuotes from '../sections/ExploreQuotes'
 import CampaignCarousal from '../sections/CampaignCarousal'
+import Footer from '../components/common/Footer'
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
       </div>
       <div>
         <CampaignCarousal />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   )

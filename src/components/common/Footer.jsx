@@ -1,18 +1,24 @@
-import Link from "next/link";
+
 import { Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
 import { Avatar } from "@nextui-org/avatar";
 import { Button } from "@nextui-org/button";
 import Circles from "./Circles";
+import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png'
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
 
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 const Footer = () => {
   return (
-    <div className="relative bg-red-400 dark:bg-slate-600 py-16 pb-6 overflow-hidden">
+
+    <div className="relative dark:text-white dark:bg-slate-600 bg-footer py-16 pb-6 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/4 px-4 mb-10">
             <div className="flex items-center ">
-              <Avatar src="./NU-logo.png" name="logo" />
-              <h2 className="text-2xl font-bold ml-2">FAST NUCES</h2>
+              <img width={80} src={logo} name="logo" />
+              <h2 className="text-2xl font-bold ml-2">BSG FOR SDG</h2>
             </div>
             <p className="text-lg mb-4 py-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -23,27 +29,28 @@ const Footer = () => {
             </Link>
           </div>
 
+
           <div className="w-full md:w-1/4 px-4 mb-8 relative z-10">
-            <h3 className="font-bold mb-4 text-xl">Contact Us</h3>
+            <h3 className="font-bold mb-4 text-xl">Explore</h3>
             <ul className="flex flex-col space-y-4 text-md">
               <li>
-                <Link href="#" className="hover:underline ">
-                  About Us
+                <Link to="/" className="hover:underline ">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
-                  Careers
+                <Link to="/sdg/1" className="hover:underline">
+                  17 SDGs
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
-                  Program Trade
+                <Link to="/quotes" className="hover:underline">
+                  SDG Quotes
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
-                  Acquisions
+                <Link to="/sdg-campaigns" className="hover:underline">
+                  SDG Campaigns
                 </Link>
               </li>
             </ul>
@@ -54,32 +61,37 @@ const Footer = () => {
             <ul className="flex flex-col space-y-4 text-md">
               <li>
                 <Link href="#" className="hover:underline">
-                  FAQs
+                  Contact
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:underline">
-                  Care & Use
+                  FeedBack
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:underline">
-                  Shipping
+                  Term of Use
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:underline">
-                  Return
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
           </div>
 
           <div className="relative w-full md:w-1/4 px-4 mb-8">
-            <h3 className="font-bold mb-4 text-xl">Join Our Family</h3>
+            <h3 className="font-bold mb-4 text-xl">BSG Headquarters</h3>
             <p className="text-lg">
-              Lorem ipsum is a placeholder text commonly used in the graphic,
-              print, placeholder text
+              <LocationOnIcon /> J - 21, Hauz Khas Enclave, New Delhi-110016, Delhi, India
+            </p>
+            <p className="text-lg mt-4">
+              <EmailIcon /> contact@gmail.com
+            </p>
+            <p className="text-lg mt-4">
+              <LocalPhoneIcon /> +91-1140012800
             </p>
             <div className="md:absolute bottom-0 left-4 flex space-x-2 py-0 pt-4 lg:py-8 mb-4 md:mb-0 relative z-10">
               <Link
@@ -124,16 +136,13 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row text-center justify-between items-center lg:mt-4 pt-8 border-t"></div>
         <div className="text-center text-md ">
-          All Right Reserved 2024 - FAST NUCES
+          All Right Reserved 2024 - Muneeb Ur Rehman
         </div>
       </div>
-      <div className="absolute top-1/2 -left-20 -z-3">
-        <Circles options={[1, 0, 1]} />
+      <div className="absolute top-1/2 right-36 -z-3">
+        <Circles options={[1, 1, 0]} />
       </div>
 
-      <div className="absolute -bottom-5 left-1/2 -z-3">
-        <Circles options={[1, 1, 1]} />
-      </div>
     </div>
   );
 };
