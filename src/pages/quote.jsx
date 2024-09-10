@@ -9,6 +9,7 @@ export default function Quote() {
      const fetchData = async () => {
             const response = await fetch('https://sdg-server-nine.vercel.app/quotes/get-all');
             const data = await response.json();
+            data.reverse();
             setQuotes(data);
         }
         fetchData();

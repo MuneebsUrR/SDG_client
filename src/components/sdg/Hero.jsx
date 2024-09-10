@@ -1,4 +1,5 @@
 import React from 'react';
+import { colors } from '../../../lib/colors';
 // Update with the correct path
 
 import { useNavigate } from 'react-router-dom';
@@ -41,13 +42,7 @@ const Hero = ({ id, description }) => {
         { id: 17, icon: goal17 },
     ];
 
-    // Array of button numbers and their corresponding colors
-    const colors = [
-        '#E5243B', '#DDA63A', '#4C9F38', '#C5192D', '#FF3A21',
-        '#26BDE2', '#FCC30B', '#A21942', '#FD6925', '#DD1367',
-        '#FD9D24', '#BF8B2E', '#3F7E44', '#0A97D9', '#56C02B',
-        '#00689D', '#19486A'
-    ];
+
     const navigate = useNavigate();
     const handleClick = (index) => {
         navigate(`/sdg/${index}`);
@@ -78,7 +73,7 @@ const Hero = ({ id, description }) => {
                         {
                             colors.map((color, index) => {
                                 return (
-                                    <button onClick={() => handleClick(index + 1)} className='text-xl m-1 w-14 h-14 text-white font-bold rounded-lg transition-transform transform hover:scale-110' key={index} style={{ backgroundColor: color }}>
+                                    <button onClick={() => handleClick(index + 1)} className={`text-xl m-1 ${id-1==index ? 'w-16 h-16': 'w-14 h-14'} text-white font-bold rounded-lg transition-transform transform hover:scale-110`} key={index} style={{ backgroundColor: color }}>
                                         {index + 1}
                                     </button>
                                 )
