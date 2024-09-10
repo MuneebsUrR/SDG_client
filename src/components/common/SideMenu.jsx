@@ -33,7 +33,7 @@ const SideMenu = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="bg-cyan-300 dark:bg-cyan-950 p-20 rounded-lg">
+          <div className="bg-primary text-white dark:bg-cyan-950 p-20 rounded-lg">
             {Sections.map((s, k) => (
               <motion.div
                 key={k}
@@ -53,8 +53,8 @@ const SideMenu = () => {
             <Button
               size="lg"
               radius="full"
-              color="primary"
-              className="fixed bottom-10 left-1/2"
+           
+              className="fixed bottom-10 left-1/2 text-white bg-secondary dark:bg-primary"
               isIconOnly
               onClick={closeSideNavbar}
             >
@@ -77,10 +77,9 @@ const SideMenu = () => {
 export default SideMenu;
 
 const Sections = [
-  { href: "/about", text: "About Campus" },
-  { href: "/faculty", text: "Our Faculty" },
-  { href: "/research-labs", text: "Resesarch Labs" },
-  { href: "/campus-life", text: "Campus Life" },
-  { href: "/events", text: "Campus Events" },
-  { href: "/news", text: "Campus News" },
+  { href: "/", text: "Home" },
+  { href: "/sdg/1", text: "17 SDGs" },
+  { href: "/quotes", text: "SDG Quotes" },
+  { href: "/sdg-campaigns", text: "SDG Campaigns" },
+  { href: "/", text: "About SDG" },
 ];
