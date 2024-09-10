@@ -1,39 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import banner from '../assets/campaign-banner.jpg'
 import campaignIcon from '../assets/icon-campaigns-fill.png'
 import { PledgeCard } from '../components/common/Carousal';
-const pledges = [
-  {
-    title: "MANGROVE CLEANING DRIVE",
-    image: "https://picsum.photos/200/300",
-    pledgeText: "I pledge to keep the mangroves clean",
-    pledges: 246,
-    sdgs: [3, 11, 12, 13, 14, 15]
-  },
-  {
-    title: "SAY NO TO PLASTIC",
-    image: "https://picsum.photos/200/300",
-    pledgeText: "I pledge to say NO to plastic bottles and plastic bags.",
-    pledges: 2227,
-    sdgs: [12, 13, 14, 15]
-  },
-  {
-    title: "REDUCE CARBON FOOTPRINT",
-    image: "https://picsum.photos/200/300",
-    pledgeText: "I pledge to reduce my carbon footprint.",
-    pledges: 1589,
-    sdgs: [11, 13]
-  },
-  {
-    title: "SAVE WATER",
-    image: "https://picsum.photos/200/300",
-    pledgeText: "I pledge to conserve water in my daily life.",
-    pledges: 3045,
-    sdgs: [6, 12, 14]
-  },
-];
+import CampaignContext from '../context/CampaignContext';
+
 
 export default function CampaignsList() {
+  const {campaigns} = useContext(CampaignContext);
   return (
     <div>
       <div className=' h-[45vh] md:h-[70vh]' style={{
@@ -56,7 +29,7 @@ export default function CampaignsList() {
         <hr className='m-4 text-slate-500' />
       </div>
       <div className='flex flex-wrap items-center justify-center gap-4 p-5'>
-        {pledges.map((pledge, index) => (
+        {campaigns && campaigns.map((pledge, index) => (
           <PledgeCard key={index} pledge={pledge} />
         ))}
       </div>

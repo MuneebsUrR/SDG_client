@@ -1,12 +1,26 @@
 // CampaignContext.jsx
-import { createContext, useState } from 'react';
+import { createContext, useState,useEffect } from 'react';
 
 const CampaignContext = createContext();
 
 export const CampaignProvider = ({ children }) => {
     const [campaigns, setCampaigns] = useState([]);
+
+    useEffect(() => {
+     //fetch all campaigns
+       const fetchData = async()=>{
+        const response =  await fetch('https://sdg-server-nine.vercel.app/campaigns/get-all');
+        const data = await response.json();
+        setCampaigns(data);
+      
+       }
+        
+         fetchData();
+    }, [])
+    
+
     return (
-        <CampaignContext.Provider value={campaigns}>
+        <CampaignContext.Provider value={{campaigns, setCampaigns}}>
             {children}
         </CampaignContext.Provider>
     );
