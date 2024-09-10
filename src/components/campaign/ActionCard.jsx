@@ -8,7 +8,7 @@ export default function ActionCard() {
     const { name } = useParams()
     return (
         <div className='p-2'>
-            <h1 className='text-center mt-10 font-bold text-2xl'>{name}</h1>
+            <h1 className='text-center mt-10 font-bold text-3xl'>{name}</h1>
             <div className='p-6 mt-10 mb-5 space-x-4 max-w-md rounded-xl mx-auto bg-gradient-to-r from-yellow-300 via-pink-400 to-pink-300 flex items-center justify-center'>
                 <div className='font-bold text-white'>
                     <p className='text-3xl'>247</p>
