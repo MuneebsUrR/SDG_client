@@ -7,6 +7,7 @@ import Navbar from './components/common/Navbar.jsx';
 import SideMenu from './components/common/SideMenu.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import { CampaignProvider } from './context/CampaignContext.jsx';
+import Footer from './components/common/Footer.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
           <Navbar />
           <SideMenu />
           <App />
+          <Footer />
         </CampaignProvider>
       </Providers>
     </BrowserRouter>
