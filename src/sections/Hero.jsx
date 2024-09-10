@@ -3,28 +3,7 @@ import { Box, Typography, IconButton } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Button from '../components/common/Button';
-
-const newsItems = [
-    {
-        id: 1,
-        title: 'Bharat Soka Gakkai Collects 27,726 Kg Of Plastic Waste From Delhi-NCR For Recycling',
-        imageUrl: 'https://picsum.photos/200/300', // Replace with actual image URL
-        href: '#'
-
-    },
-    {
-        id: 2,
-        title: 'New Innovations in Renewable Energy',
-        imageUrl: 'https://picsum.photos/200/300', // Replace with actual image URL
-        href: '#'
-    },
-    {
-        id: 3,
-        title: 'Climate Change and Its Impact on Wildlife',
-        imageUrl: 'https://picsum.photos/200/300', // Replace with actual image URL
-        href: '#'
-    },
-];
+import { newsItems } from '../../lib/news';
 
 const Hero = () => {
     const [currentIndex, setCurrentIndex] = React.useState(0);

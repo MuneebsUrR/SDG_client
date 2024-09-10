@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SDGTitle from '../components/common/SDGTitle';
 import Button from '../components/common/Button';
-import { quotes } from '../../lib/quotes';
 import Badge from '../components/common/Badge';
 const ExploreQuotes = () => {
+
+    const [quote, setQuote] = useState(null);
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch('https://sdg-server-nine.vercel.app/quotes/get-latest');
+            const data = await response.json();
+            setQuote(data);
+        }
+
+        fetchData();
+    }, [])
+
+
     return (
         <div>
             <div className='flex justify-center mt-20'>
@@ -20,15 +32,15 @@ const ExploreQuotes = () => {
                         <div className="absolute inset-0 bg-pink-50 rounded-lg border-2 border-red-300 border-t-0"></div>
                         <div className="absolute -top-6 left-20 text-red-500 text-7xl">"</div>
                         <div className="absolute -bottom-5 right-0 text-red-500 text-7xl rotate-180">"</div>
-                        <p className='relative z-10 text-gray-800 text-xl pt-2 text-red-500 font-bold text-center'>{quotes[0].date}</p>
+                        <p className='relative z-10 text-gray-800 text-xl pt-2 text-red-500 font-bold text-center'>{quote?.date}</p>
                         <p className="relative z-10 px-2 text-gray-800 text-xl pt-2 pb-8 text-center">
-                            {quotes[0].text}
+                            {quote?.text}
                         </p>
                         <p className="relative z-10 text-gray-800 text-sm text-center">Related SDGs</p>
                         <div>
                             <div className="relative z-10 flex items-center justify-center">
                                 {
-                                    quotes[0].sdg.map((number, index) => (
+                                    quote && quote?.sdg.map((number, index) => (
                                         <Badge number={number} />
                                     ))
                                 }

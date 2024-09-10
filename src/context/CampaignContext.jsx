@@ -6,6 +6,7 @@ const CampaignContext = createContext();
 export const CampaignProvider = ({ children }) => {
     const [campaigns, setCampaigns] = useState([]);
 
+
     useEffect(() => {
      //fetch all campaigns
        const fetchData = async()=>{

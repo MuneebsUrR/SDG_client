@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import quoteIcon from '../assets/quote-icon.png'
 import banner from '../assets/quote-banner.jpg'
 import QuoteCard from '../components/quote/QuoteCard'
-import { quotes } from '../../lib/quotes'
+
 export default function Quote() {
+    const [quotes, setQuotes] = useState(null);
+    useEffect(() => {
+     const fetchData = async () => {
+            const response = await fetch('https://sdg-server-nine.vercel.app/quotes/get-all');
+            const data = await response.json();
+            setQuotes(data);
+        }
+        fetchData();
+    }, [])
+    
     return (
         <div>
             <div className=' h-[45vh] md:h-[60vh]' style={{
@@ -28,7 +38,7 @@ export default function Quote() {
             <div className="container mx-auto mt-10 px-4">
                 {/* Responsive grid with 3 columns on medium screens and 1 column on small screens */}
                 <div className="flex flex-wrap justify-center gap-8">
-                    {quotes.map((quote, index) => (
+                    {quotes&& quotes.map((quote, index) => (
                         <QuoteCard
                             key={index}
                             date={quote.date}
