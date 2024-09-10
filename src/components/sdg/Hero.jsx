@@ -55,8 +55,8 @@ const Hero = ({ id, description }) => {
 
     return (
         <div className='flex'>
-            <div style={{backgroundColor:`${colors[id-1]}`}} className='flex items-center justify-center flex-col w-1/4'>
-               
+            <div style={{ backgroundColor: `${colors[id - 1]}` }} className='flex items-center justify-center flex-col w-1/4'>
+
                 <div>
                     <img src={goals[id - 1].icon} alt="SDG Logo" />
                 </div>
