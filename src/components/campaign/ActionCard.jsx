@@ -29,8 +29,8 @@ export default function ActionCard() {
                     <span className="relative z-10"> <FileUploadIcon fontSize='small' /> UPLOAD ACTION</span>
                 </button>
             </div>
-            <div className='m-2 p-5' style={{ backgroundColor: '#F7F1F7' }}>
-                <p className='text-sm'>Did you know: Mangroves are an extremely important ecosystem for humans.
+            <div className='m-2' style={{ backgroundColor: '#F7F1F7' }}>
+                <p className='text-md p-5'>Did you know: Mangroves are an extremely important ecosystem for humans.
 
                     They are the only trees that thrive in salty waters and improve water quality by filtering out nutrients and sediments.
 
@@ -38,7 +38,7 @@ export default function ActionCard() {
 
                     Protecting mangroves and restoring damaged ones also helps combat climate change through carbon sequestration as they are some of the most carbon-rich ecosystems on the planet, storing on average 1,000 tonnes of carbon per hectare in their biomass and underlying soils.</p>
                 
-                <div className='mt-4'>
+                <div className='mt-4 p-5'>
                     <p className='text-sm'>Related SDGs</p>
                     <div className='flex'>
                         <Badge number='1' />
