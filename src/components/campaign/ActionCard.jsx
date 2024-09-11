@@ -13,7 +13,7 @@ export default function ActionCard({ data }) {
     const handlePledgeClick = () => {
         //incrementing the pledge count
         try {
-            fetch(`https://sdg-server-nine.vercel.app/campaigns/increment-pledge`,
+            fetch(import.meta.env.VITE_API_REQ_URI+`/campaigns/increment-pledge`,
                 {
                     method: 'POST',
                     headers: {

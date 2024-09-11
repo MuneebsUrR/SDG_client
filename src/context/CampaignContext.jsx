@@ -10,7 +10,7 @@ export const CampaignProvider = ({ children }) => {
     useEffect(() => {
      //fetch all campaigns
        const fetchData = async()=>{
-        const response =  await fetch('https://sdg-server-nine.vercel.app/campaigns/get-all');
+        const response =  await fetch(import.meta.env.VITE_API_REQ_URI+'/campaigns/get-all');
         const data = await response.json();
         //reversing the array to get the latest campaign first
         data.reverse();

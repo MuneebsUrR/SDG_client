@@ -7,7 +7,7 @@ export default function Quote() {
     const [quotes, setQuotes] = useState(null);
     useEffect(() => {
      const fetchData = async () => {
-            const response = await fetch('https://sdg-server-nine.vercel.app/quotes/get-all');
+            const response = await fetch(import.meta.env.VITE_API_REQ_URI+'/quotes/get-all');
             const data = await response.json();
             data.reverse();
             setQuotes(data);

@@ -7,7 +7,7 @@ const ExploreQuotes = () => {
     const [quote, setQuote] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('https://sdg-server-nine.vercel.app/quotes/get-latest');
+            const response = await fetch(import.meta.env.VITE_API_REQ_URI+'/quotes/get-latest');
             const data = await response.json();
             setQuote(data);
         }
