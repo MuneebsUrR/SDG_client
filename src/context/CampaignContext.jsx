@@ -12,6 +12,7 @@ export const CampaignProvider = ({ children }) => {
        const fetchData = async()=>{
         const response =  await fetch(import.meta.env.VITE_API_REQ_URI+'/campaigns/get-all');
         const data = await response.json();
+        console.log(data);
         //reversing the array to get the latest campaign first
         data.reverse();
         setCampaigns(data);
