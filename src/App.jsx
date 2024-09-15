@@ -16,7 +16,6 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
-        
         <Route path='/sdg/:id' element={<SDG />} />
         <Route path='/quotes' element={<Quote />} />
         <Route path='/sdg-campaigns' element={<CampaignsList />} />
