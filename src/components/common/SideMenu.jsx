@@ -62,10 +62,10 @@ const SideMenu = () => {
             </Button>
           </div>
 
-          <div className="absolute top-1/2 right-80 -z-3">
+          <div className="hidden md:block absolute top-1/2 right-80 -z-3">
             <Circles options={[0, 1, 1]} />
           </div>
-          <div className="absolute top-20 left-0 -z-3">
+          <div className="hidden md:block absolute top-20 left-0 -z-3">
             <Circles options={[1, 0, 1]} />
           </div>
         </motion.div>

@@ -52,10 +52,10 @@ const Hero = () => {
 
                         }}
                     >
-                        <Typography variant="h3" sx={{ fontWeight: 'bold', margin: '20px' }}>
+                        <div className='font-bold text-2xl md:text-5xl m-5'>
                             {item.title}
-                        </Typography>
-                        <div className='m-6'>
+                        </div>
+                        <div className='m-5'>
 
                             <Button link={item.href} title='KNOW MORE' />
                         </div>
