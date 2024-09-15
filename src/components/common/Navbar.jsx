@@ -46,7 +46,7 @@ const Navbar = () => {
 
         <div className="text-white flex flex-row gap-2 transition-transform duration-150">
           <ThemeSwitcher />
-           <PersonIcon fontSize="large" />
+           {/* <PersonIcon fontSize="large" /> */}
         </div>
       </div>
     </nav>
